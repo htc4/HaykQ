@@ -1,0 +1,683 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap');
+
+.navbar {
+    background-color: #333;
+    width: 25%;
+    height: 100vh;
+    display: none;
+  }
+  
+  .navbar ul {
+    overflow: hidden;
+    list-style-type: none;
+    padding-top: 50%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .navbar li {
+    display: block;
+    margin: 0;
+    padding: 5% 50px;
+    width: 100%;
+  }
+  
+  .navbar li:hover {
+    cursor: pointer;
+  }
+  
+  
+  .navbar li a {
+    color: #d3e3e3;
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.6em;
+    transition: all .5s;
+  }
+  
+  .navbar li:hover {
+    cursor: pointer;
+    background-color: #ce3939;
+    letter-spacing: 10px;
+  }
+  
+  .hamburger {
+    margin: 0;
+    margin-left: 15px;
+    padding: 0;
+    float: left;
+    transition: opacity .3s;
+  }
+  
+  .hamburger:hover {
+    cursor: pointer;
+    opacity: .5;
+  }
+  
+  .hamburger .line{
+    width: 50px;
+    height: 5px;
+    background: rgb(236, 66, 66);
+    margin: 8px auto;
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+  }
+  
+  .hamburger .line:nth-child(1) {
+    background-color: #a77a33;
+  }
+  
+  .hamburger .line:nth-child(2) {
+    background-color: #633200;
+  }
+  
+  .hamburger .line:nth-child(3) {
+    background-color: #a77a33;
+  }
+  
+  .hamburger.isactive .line:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger.isactive .line:nth-child(1) {
+    transform: translateY(13px) rotate(45deg);
+  }
+  
+  .hamburger.isactive .line:nth-child(3) {
+    transform: translateY(-13px) rotate(-45deg);
+  }
+  
+  .navbar {
+    transition: all 2s ease-in-out;
+  }
+  
+  .navbar.active {
+    display: block;
+    animation: fade .5s;
+    width: 300px;
+    height: 750px;
+
+  }
+  
+  @keyframes fade {
+    from{transform: translateX(-200px); opacity: 0;}
+    to {transform: translateX(0px); opacity: 1;}
+  }
+  
+  
+  @media screen and (max-width: 1360px) {
+    
+    .h1 h1 {
+      font-size: 3em;
+      left: 35%;
+    }
+    
+    .navbar {
+      width: 30%;
+    }
+    
+    .navbar ul {
+      padding-left: 0%;
+    }
+    
+    .navbar li {
+      padding: 3% 0;
+    }
+    
+    .navbar li a {
+      font-size: 1.2em;
+    }
+    
+  }
+  
+  @media screen and (max-width: 768px) {
+    .hamburger {
+      float: right;
+    }
+    
+    .h1 h1 {
+      left: 23%;
+      top: 50%;
+      font-size: 1.4em;
+    }
+    
+    .navbar {
+    background-color: #333;
+    width: 100%;
+    height: 45vh;
+    display: none;
+  }
+  
+  .navbar ul {
+    overflow: hidden;
+    list-style-type: none;
+    padding-top: 3%;
+    padding-left: 30%;
+    padding-right: 3%;
+    padding-bottom: 3%;
+    margin: 0;
+  }
+  
+  .navbar li {
+    display: block;
+    margin: 0;
+    padding: 14px 20px;
+    width: 100%;
+    transition: background-color .5s;
+  }
+  
+  .navbar li:hover {
+    cursor: pointer;
+    background-color: #ce3939;
+  }
+  
+  
+  .navbar li a {
+    color: #d3e3e3;
+    text-decoration: none;
+    padding: 14px 16px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1em;
+    transition: all 1s;
+  }
+  
+  .navbar li:hover {
+    cursor: pointer;
+    background-color: #ce3939;
+    letter-spacing: 0px;
+  }
+  
+    
+   
+  
+  }
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+}
+
+input,
+textarea {
+    outline: none;
+}
+
+h1,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    line-height: 120px;
+    height: 120px;
+    text-shadow: 1px -1px #000;
+
+    /*animação*/
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+header.sticky {
+    position: fixed;
+    font-size: 24px;
+    line-height: 48px;
+    height: 70px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.64);
+    text-align: left;
+    padding-left: 20px;
+}
+
+.sticky .logo img {
+    width: 150px;
+    transition: 1s;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+}
+
+header .row {
+    align-items: center;
+}
+
+header .hamburgerO {
+    display: flex;
+    gap: 61px;
+    justify-content: flex-end;
+}
+
+header .menu ul li {
+    list-style: none;
+}
+
+header .menu ul li a {
+    color: #FFF;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.9px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+/* section one */
+.sectionOne {
+    background-image: url("./../assets/img/top-view-chicken-doner-wrapped-lavash-wooden-cutting-board\ 1.jpg");
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.sectionOneContent {
+    padding: 570px 0 91px 0;
+    text-align: center;
+}
+
+.sectionOneContent p {
+    color: #FFF;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 2.55px;
+}
+
+.sectionOneContent h1 {
+    padding-top: 91px;
+    color: #FFF;
+    font-size: 85px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 64.6px;
+    text-transform: uppercase;
+}
+
+/* sectionTwo */
+
+.sectionTwo {
+    background-image: url("./../assets/img/restaurant_post_bg\ 1.jpg");
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.sectionTwoImg img {
+    width: 100%;
+}
+
+.sectionTwoContent {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 83px;
+}
+
+.smallSpan {
+    color: #000;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 4.2px;
+    text-transform: capitalize;
+}
+
+.bigSpan {
+    color: #C6B089;
+    font-size: 55px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 9.9px;
+    text-transform: capitalize;
+}
+
+.sectionTwoContent p {
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 166.9%;
+    /* 26.704px */
+    letter-spacing: 0.16px;
+    text-transform: capitalize;
+}
+
+/* sectionThree */
+
+.sectionThree {
+    background-image: url("./../assets/img/restaurant_blackwood_bg\ 1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    padding: 116px 0;
+}
+
+.sectionThreeBlocks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sectionThreeBlocks p {
+    color: #FFF;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 166.9%;
+    /* 46.732px */
+    letter-spacing: 0.28px;
+    text-transform: capitalize;
+}
+
+.sectionThreeBlocks span {
+    color: #C6B089;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 166.9%;
+    /* 33.38px */
+    letter-spacing: 0.2px;
+    text-transform: capitalize;
+}
+
+.sectionFor {
+    background-image: url("./../assets/img/restaurant_post_bg\ 1.jpg");
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 81px 0 61px 0;
+}
+
+.sectionFor p {
+    margin-top: 33px;
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 215.4%;
+    /* 34.464px */
+    text-transform: uppercase;
+}
+
+.sectionFor .sectionForImg {
+    text-align: center;
+}
+
+.sectionFor .smallSpan {
+    color: #1E1E1E;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 166.9%;
+    /* 53.408px */
+    letter-spacing: 6.24px;
+    text-transform: uppercase;
+}
+
+/* sectionFive */
+
+.sectionFiveContainer {
+    justify-content: space-between;
+    display: flex;
+}
+
+.flexBlocks {
+    display: flex;
+    /* width: 50%; */
+}
+
+.blocks {
+    width: 100%;
+    background-repeat: no-repeat;
+    height: 300px;
+    background-size: cover;
+}
+
+.blocks:nth-child(1) {
+    background-image: url("./../assets/img/Group\ 1.jpg");
+
+}
+
+.blocks:nth-child(2) {
+    background-image: url("./../assets/img/restaurant_portfolio_4-thegem-portfolio-masonry-thegem-portfolio-masonry\ 1.jpg");
+}
+
+.blocks:nth-child(3) {
+    background-image: url("./../assets/img/restaurant_portfolio_1-thegem-portfolio-masonry-thegem-portfolio-masonry\ 1.jpg");
+}
+
+.blocks:nth-child(4) {
+    background-image: url("./../assets/img/restaurant_portfolio_3-thegem-portfolio-masonry-thegem-portfolio-masonry\ 1.jpg");
+}
+
+/* Section Six */
+.sectionSix {
+    background-image: url("./../assets/img/restaurant_post_bg\ 1.jpg");
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 49px;
+}
+
+.sectionSixImg {
+    text-align: center;
+}
+
+.sectionSix h4 {
+    color: #000;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 215.4%;
+    text-align: center;
+    /* 53.85px */
+    margin-bottom: 31px;
+    text-transform: uppercase;
+}
+
+.sectionSix ul li {
+    list-style-type: circle;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sectionSix ul li span {
+    color: #000;
+
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 215.4%;
+    /* 38.772px */
+    text-transform: uppercase;
+}
+
+.sectionSix ul li span div {
+    color: #000;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 215.4%;
+    /* 47.388px */
+    text-transform: uppercase;
+}
+
+.sectionSix ul li span sub {
+    color: #EC1313;
+    font-size: 15px;
+    font-style: normal;
+    margin-right: 10px;
+    font-weight: 600;
+    line-height: 215.4%;
+    /* 32.31px */
+    font-variant: all-small-caps;
+}
+
+.sectionSix ul li span:first-child {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.doted {
+    width: 5px;
+    height: 5px;
+    background-color: #000;
+    border-radius: 50%;
+}
+
+.sectionSixContent {
+    margin-top: 76px;
+}
+
+/* section Seven  */
+
+
+.sectionSeven {
+    background-image: url("./../assets/img/restaurant_blackwood_bg\ 1.jpg");
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 77px;
+}
+
+.sectionSevenTitleBlock {
+    text-align: center;
+    margin-top: 64px;
+}
+
+.sectionSevenTitleBlock p {
+    color: #C6B089;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 215.4%;
+    /* 34.464px */
+    text-transform: uppercase;
+}
+
+.sectionSevenTitleBlock h3 {
+    color: #FFF;
+    margin: 0 0 83px 0;
+    font-size: 33px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 215.4%;
+    /* 71.082px */
+    letter-spacing: 4.95px;
+    text-transform: uppercase;
+}
+
+.sectionSevenCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 34px;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 150px 150px 0px 0px;
+    border: 1.6px solid #FFF;
+    width: 203px;
+    height: 376px;
+    margin: auto;
+    justify-content: center;
+}
+
+.sectionSevenCard img {
+    width: 154px;
+    height: 154px;
+}
+
+.sectionSevenCard span {
+    color: #FFF;
+    text-align: center;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+    padding: 0 47px;
+}
+
+.sectionSevenCard .span {
+    padding: 0 55px;
+}
+
+.sectionEight {
+    background-image: url("./../assets/img/restaurant_post_bg\ 1.jpg");
+}
+
+.sectionEightContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    margin-top: 122px;
+}
+
+.sectionEightContent h5 {
+    color: #000;
+    text-align: right;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 136.9%;
+    /* 47.915px */
+    width: 376px;
+    margin: 0 0 38px 0;
+    /* line-break: anywhere; */
+    letter-spacing: 11.025px;
+    text-transform: uppercase;
+}
+
+.sectionEightImg {
+    padding: 76px;
+}
+
+.sectionEightContent p {
+    color: #000;
+    text-align: right;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 207.9%;
+    /* 37.422px */
+    text-transform: uppercase;
+}
+.sectionNinenumber {
+display: flex;
+justify-content:center;
+gap: 170px;
+margin-top: 50px;
+}
+.sectionnine {
+  background-color: #000;
+  width: 100%;
+  height: 200px;
+}
+.sectionnine h3 {
+  color: white;
+  text-align: center;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 207.9%;
+
+}
+.photoOne img {
+  width: 40px;
+  height: 40px;
+}
+.photoOne span {
+  color: white;
+}
