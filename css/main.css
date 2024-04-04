@@ -4,7 +4,7 @@ body {
   margin: 0; /* Remove default body margin */
 }
 .navbar {
-  background-color: #333; /* Background color */
+  background-color: #000000; /* Background color */
   overflow: hidden; /* Clear floats */
   position: fixed;
   width: 100%;
@@ -44,7 +44,9 @@ body {
   margin-left: auto; /* Move the image to the right side */
 }
 
-
+.sectionnine{
+    height: auto;
+}
 
 
 input,
@@ -514,7 +516,6 @@ margin-top: 50px;
 .sectionnine {
   background-color: #000;
   width: 100%;
-  height: 200px;
 }
 .sectionnine h3 {
   color: white;
@@ -531,4 +532,13 @@ margin-top: 50px;
 }
 .photoOne span {
   color: white;
+}
+.photoOne {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.hamar{
+    color: #FFF;
+
 }
